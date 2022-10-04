@@ -9,7 +9,7 @@ class Home extends StatelessWidget {
     var screenSizeHeight = MediaQuery.of(context).size.height;
 
     return Scaffold(
-        backgroundColor: const Color(0xffFFEBEE),
+        backgroundColor: const Color(0xffE0E0E0),
         body: ListView(
           children: [
             UnconstrainedBox(
@@ -131,7 +131,7 @@ class Home extends StatelessWidget {
                         padding: const EdgeInsets.only(left: 100),
                         child: Container(
                           height: 500,
-                          color: Colors.teal,
+                          color: Colors.white,
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.start,
                             crossAxisAlignment: CrossAxisAlignment.start,
@@ -140,6 +140,9 @@ class Home extends StatelessWidget {
                                 mainAxisAlignment: MainAxisAlignment.start,
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: const [
+                                  SizedBox(
+                                    height: 40,
+                                  ),
                                   SizedBox(
                                     width: 100,
                                       child: Text(
@@ -159,6 +162,9 @@ class Home extends StatelessWidget {
                                   )
                                 ],
                               ),
+                              const SizedBox(
+                                width: 200,
+                              ),
                               Expanded(
                                 child: Container(
                                   width: MediaQuery.of(context).size.width,
@@ -169,7 +175,13 @@ class Home extends StatelessWidget {
                                             'assets/images/blu.jpg'
                                             //'assets/images/babarinde.jpeg',
                                           ),
-                                          fit: BoxFit.fill)),
+                                          fit: BoxFit.fill,
+                                      colorFilter: ColorFilter.matrix(<double>[
+                                        0.2126,0.7152,0.0722,0,0,
+                                        0.2126,0.7152,0.0722,0,0,
+                                        0.2126,0.7152,0.0722,0,0,
+                                        0,0,0,1,0,
+                                      ]))),
                                 ),
                               )
                               /*FittedBox(
