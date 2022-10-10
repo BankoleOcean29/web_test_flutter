@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 
+
 class Home extends StatelessWidget {
   Home({Key? key}) : super(key: key);
+
+  ImageProvider blu = AssetImage('assets/images/blu.jpg');
 
   @override
   Widget build(BuildContext context) {
@@ -141,23 +144,23 @@ class Home extends StatelessWidget {
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: const [
                                   SizedBox(
-                                    height: 40,
+                                    height: 200,
                                   ),
                                   SizedBox(
-                                    width: 100,
                                       child: Text(
                                     'Manamia Art fest',
-                                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                                    style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
                                   )),
                                   SizedBox(
-                                    width: 40,
+                                    height: 20,
                                   ),
                                   SizedBox(
                                     width: 400,
                                     child: Text(
                                       'A very beautiful view. The very sweetn'
-                                      'ess of the logos that lives in us',
-                                      style: TextStyle(fontSize: 20),
+                                      'ess of the logos that lives in us. We are'
+                                          ' strong, bold and beautiful.',
+                                      style: TextStyle(fontSize: 15),
                                     ),
                                   )
                                 ],
@@ -169,14 +172,11 @@ class Home extends StatelessWidget {
                                 child: Container(
                                   width: MediaQuery.of(context).size.width,
                                   height: 500,
-                                  decoration: const BoxDecoration(
+                                  decoration: BoxDecoration(
                                       image: DecorationImage(
-                                          image: AssetImage(
-                                            'assets/images/blu.jpg'
-                                            //'assets/images/babarinde.jpeg',
-                                          ),
+                                          image: blu,
                                           fit: BoxFit.fill,
-                                      colorFilter: ColorFilter.matrix(<double>[
+                                      colorFilter: const ColorFilter.matrix(<double>[
                                         0.2126,0.7152,0.0722,0,0,
                                         0.2126,0.7152,0.0722,0,0,
                                         0.2126,0.7152,0.0722,0,0,

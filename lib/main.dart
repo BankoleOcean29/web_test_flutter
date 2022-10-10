@@ -13,6 +13,7 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    precacheImage(const AssetImage('assets/images/'), context);
     return MaterialApp(
       builder: (context, child) => ResponsiveWrapper.builder(
         child,
