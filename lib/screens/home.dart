@@ -4,7 +4,8 @@ import 'package:flutter/material.dart';
 class Home extends StatelessWidget {
   Home({Key? key}) : super(key: key);
 
-  ImageProvider blu = AssetImage('assets/images/blu.jpg');
+  ImageProvider blu = const AssetImage('assets/images/blu.jpg');
+  ImageProvider babarinde = const AssetImage('assets/images/babarinde.jpeg');
 
   @override
   Widget build(BuildContext context) {
@@ -142,25 +143,61 @@ class Home extends StatelessWidget {
                               Column(
                                 mainAxisAlignment: MainAxisAlignment.start,
                                 crossAxisAlignment: CrossAxisAlignment.start,
-                                children: const [
-                                  SizedBox(
+                                children: [
+                                  const SizedBox(
                                     height: 200,
                                   ),
-                                  SizedBox(
+                                  const SizedBox(
                                       child: Text(
                                     'Manamia Art fest',
                                     style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
                                   )),
-                                  SizedBox(
+                                  const SizedBox(
                                     height: 20,
                                   ),
-                                  SizedBox(
+                                  const SizedBox(
                                     width: 400,
                                     child: Text(
                                       'A very beautiful view. The very sweetn'
                                       'ess of the logos that lives in us. We are'
                                           ' strong, bold and beautiful.',
                                       style: TextStyle(fontSize: 15),
+                                    ),
+                                  ),
+                                  const SizedBox(
+                                    height: 20,
+                                  ),
+                                  Container(
+                                    height: 120,
+                                    child: Stack(
+                                      children: [
+                                        Padding(
+                                          padding: const EdgeInsets.only(left: 20, top: 20),
+                                          child: Container(
+                                            width: 230,
+                                            height: 70,
+                                            decoration: BoxDecoration(
+                                              border: Border.all(
+                                                color: Colors.black,
+                                              ),
+                                            ),
+                                          ),
+                                        ),
+                                        Positioned(
+                                          bottom: 40,
+                                          child: Container(
+                                            alignment: Alignment.center,
+                                            width: 240,
+                                            height: 80,
+                                            color: Colors.black,
+                                            child: const Text(
+                                              'BUY TICKET',
+                                              style: TextStyle(color: Colors.white),
+                                            ),
+                                          ),
+                                        )
+
+                                      ],
                                     ),
                                   )
                                 ],
@@ -184,19 +221,23 @@ class Home extends StatelessWidget {
                                       ]))),
                                 ),
                               )
-                              /*FittedBox(
-                                fit: BoxFit.fill,
-                                child: Image.asset('assets/images/babarinde.jpeg',
-                                //alignment: Alignment.topLeft,
-                                //scale: 7,
-                                width: 600,
-                                height: 600,
-                                ),
-                              )*/
                             ],
                           ),
                         ),
                       ),
+                      const SizedBox(
+                        height: 200,
+                      ),
+                      Container(
+                        width: screenSizeWidth,
+                        child: Stack(
+                          children: [
+                            Positioned(child: Image(
+                              image: babarinde,
+                            ))
+                          ],
+                        ),
+                      )
                     ],
                   ),
                 ),
