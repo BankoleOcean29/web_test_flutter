@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-
 class Home extends StatelessWidget {
   Home({Key? key}) : super(key: key);
 
   ImageProvider blu = const AssetImage('assets/images/blu.jpg');
   ImageProvider babarinde = const AssetImage('assets/images/babarinde.jpeg');
+  ImageProvider hand = const AssetImage('assets/images/hand.png');
 
   @override
   Widget build(BuildContext context) {
@@ -150,7 +150,9 @@ class Home extends StatelessWidget {
                                   const SizedBox(
                                       child: Text(
                                     'Manamia Art fest',
-                                    style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                                    style: TextStyle(
+                                        fontSize: 24,
+                                        fontWeight: FontWeight.bold),
                                   )),
                                   const SizedBox(
                                     height: 20,
@@ -160,7 +162,7 @@ class Home extends StatelessWidget {
                                     child: Text(
                                       'A very beautiful view. The very sweetn'
                                       'ess of the logos that lives in us. We are'
-                                          ' strong, bold and beautiful.',
+                                      ' strong, bold and beautiful.',
                                       style: TextStyle(fontSize: 15),
                                     ),
                                   ),
@@ -172,7 +174,8 @@ class Home extends StatelessWidget {
                                     child: Stack(
                                       children: [
                                         Padding(
-                                          padding: const EdgeInsets.only(left: 20, top: 20),
+                                          padding: const EdgeInsets.only(
+                                              left: 20, top: 20),
                                           child: Container(
                                             width: 230,
                                             height: 70,
@@ -192,11 +195,11 @@ class Home extends StatelessWidget {
                                             color: Colors.black,
                                             child: const Text(
                                               'BUY TICKET',
-                                              style: TextStyle(color: Colors.white),
+                                              style: TextStyle(
+                                                  color: Colors.white),
                                             ),
                                           ),
                                         )
-
                                       ],
                                     ),
                                   )
@@ -207,18 +210,35 @@ class Home extends StatelessWidget {
                               ),
                               Expanded(
                                 child: Container(
-                                  width: MediaQuery.of(context).size.width,
+                                  width: screenSizeWidth,
                                   height: 500,
                                   decoration: BoxDecoration(
                                       image: DecorationImage(
                                           image: blu,
                                           fit: BoxFit.fill,
-                                      colorFilter: const ColorFilter.matrix(<double>[
-                                        0.2126,0.7152,0.0722,0,0,
-                                        0.2126,0.7152,0.0722,0,0,
-                                        0.2126,0.7152,0.0722,0,0,
-                                        0,0,0,1,0,
-                                      ]))),
+                                          colorFilter:
+                                              const ColorFilter.matrix(<double>[
+                                            0.2126,
+                                            0.7152,
+                                            0.0722,
+                                            0,
+                                            0,
+                                            0.2126,
+                                            0.7152,
+                                            0.0722,
+                                            0,
+                                            0,
+                                            0.2126,
+                                            0.7152,
+                                            0.0722,
+                                            0,
+                                            0,
+                                            0,
+                                            0,
+                                            0,
+                                            1,
+                                            0,
+                                          ]))),
                                 ),
                               )
                             ],
@@ -226,15 +246,79 @@ class Home extends StatelessWidget {
                         ),
                       ),
                       const SizedBox(
-                        height: 200,
+                        height: 250,
                       ),
                       Container(
                         width: screenSizeWidth,
+                        height: 800,
                         child: Stack(
                           children: [
-                            Positioned(child: Image(
-                              image: babarinde,
-                            ))
+                            Container(
+                              height: 600,
+                              width: 500,
+                              decoration: BoxDecoration(
+                                  image: DecorationImage(
+                                      image: babarinde,
+                                      fit: BoxFit.fill,
+                                      colorFilter:
+                                          const ColorFilter.matrix(<double>[
+                                        0.2126,
+                                        0.7152,
+                                        0.0722,
+                                        0,
+                                        0,
+                                        0.2126,
+                                        0.7152,
+                                        0.0722,
+                                        0,
+                                        0,
+                                        0.2126,
+                                        0.7152,
+                                        0.0722,
+                                        0,
+                                        0,
+                                        0,
+                                        0,
+                                        0,
+                                        1,
+                                        0,
+                                      ]))),
+                            ),
+                            Positioned(
+                              left: 500,
+                              top: 200,
+                              child: Container(
+                              height: 200,
+                              width: 400,
+                              decoration: BoxDecoration(
+                                  image: DecorationImage(
+                                      image: hand,
+                                      fit: BoxFit.fill,
+                                      colorFilter:
+                                      const ColorFilter.matrix(<double>[
+                                        0.2126,
+                                        0.7152,
+                                        0.0722,
+                                        0,
+                                        0,
+                                        0.2126,
+                                        0.7152,
+                                        0.0722,
+                                        0,
+                                        0,
+                                        0.2126,
+                                        0.7152,
+                                        0.0722,
+                                        0,
+                                        0,
+                                        0,
+                                        0,
+                                        0,
+                                        1,
+                                        0,
+                                      ]))),
+                            ),
+                            )
                           ],
                         ),
                       )
